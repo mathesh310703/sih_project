@@ -1,0 +1,42 @@
+create table therapy(
+p_id int ,
+disorder_name varchar(100),
+disorder_letter varchar(100),
+words varchar(100)
+);
+insert into therapy values(1001,'articulation_disorder','s','snake');
+insert into therapy values(1002,'articulation_disorder','s','mouse');
+insert into therapy values(1003,'articulation_disorder','s','socks');
+insert into therapy values(1004,'articulation_disorder','s','sun');
+insert into therapy values(1005,'articulation_disorder','s','eraser');
+insert into therapy values(1006,'articulation_disorder','s','cross');
+insert into therapy values(1007,'articulation_disorder','s','star');
+insert into therapy values(1008,'articulation_disorder','s','sister');
+insert into therapy values(1009,'articulation_disorder','s','ears');
+insert into therapy values(1010,'articulation_disorder','n','nine');
+insert into therapy values(1011,'articulation_disorder','n','monkey');
+insert into therapy values(1012,'articulation_disorder','n','green');
+insert into therapy values(1013,'articulation_disorder','n','neptune');
+insert into therapy values(1014,'articulation_disorder','n','bunny');
+insert into therapy values(1015,'articulation_disorder','n','pen');
+insert into therapy values(1016,'articulation_disorder','n','nose');
+insert into therapy values(1017,'articulation_disorder','n','rainbow');
+insert into therapy values(1018,'articulation_disorder','n','garden');
+insert into therapy values(1019,'articulation_disorder','t','tractor');
+insert into therapy values(1020,'articulation_disorder','t','turtle');
+insert into therapy values(1021,'articulation_disorder','t','cat');
+insert into therapy values(1022,'articulation_disorder','t','two');
+insert into therapy values(1023,'articulation_disorder','t','potato');
+insert into therapy values(1024,'articulation_disorder','t','austronaut');
+insert into therapy values(1025,'articulation_disorder','t','triangle');
+insert into therapy values(1026,'articulation_disorder','t','water');
+insert into therapy values(1027,'articulation_disorder','t','coat');
+insert into therapy values(1028,'articulation_disorder','r','horse');
+insert into therapy values(1029,'articulation_disorder','r','rabbit');
+insert into therapy values(1030,'articulation_disorder','r','horror');
+insert into therapy values(1031,'articulation_disorder','r','chopper');
+insert into therapy values(1032,'articulation_disorder','r','race');
+insert into therapy values(1033,'articulation_disorder','r','rock');
+insert into therapy values(1034,'articulation_disorder','r','bring');
+insert into therapy values(1035,'articulation_disorder','r','war');
+insert into therapy values(1036,'articulation_disorder','r','worse');
