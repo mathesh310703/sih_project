@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>maddyworks</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/eb04ca6b7f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav style="position:fixed; top:0; left:0; width: 100%;">
+          <img src="" class="logo" />
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about">Disorders</a></li>
+            <li><a href="/#services">Exercises</a></li>
+            <li><a href="/#contact">Consultants</a></li>
+          </ul>
+        </nav>
+        <div
+          class="header-text"
+          style="max-width: 60rem; margin-left: auto; margin-right: auto"
+        >
+          <h1>
+            Hi,<br />I'm<span> A virtual assistant</span><br />
+            created to help u guys with some speech therapy disorders
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-----------about---------------------------->
+    <div
+      id="about"
+      style="max-width: 60rem; margin-left: auto; margin-right: auto"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="">
+            <h1 class="sub-title">Disorders</h1>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Aprixia
+              </p>
+              <p class="tab-links" onclick="opentab('projects done')">
+                Stuttering
+              </p>
+              <p class="tab-links" onclick="opentab('education')">
+                Dysarthria</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <p>The brain controls every single action that people make, including speaking. Most of the brain’s involvement in speech is unconscious and automatic.</p>
+                <p>When someone decides to speak, the brain sends signals to the different structures of the body that work together to produce speech. The brain instructs these structures how and when to move to form the appropriate sounds.</p>
+                <p>Apraxia of speech, or verbal apraxia, refers specifically to the impairment of motor skills that affect an individual’s ability to form the sounds of speech correctly, even when they know which words they want to say.</p>
+                
+              </ul>
+            </div>
+            <div class="tab-contents" id="projects done">
+              <ul>
+                <p>Stuttering refers to a speech disorder that interrupts the flow of speech. People who stutter can experience the following types of disruption:</p>
+
+                  <p>Repetitions occur when people involuntarily repeat sounds, vowels, or words.</p>
+                  <p>Blocks happen when people know what they want to say but have difficulty making the necessary speech sounds.</p>
+                  <p>Blocks may cause someone to feel as though their words are stuck.</p>
+                  <p>Prolongations refer to the stretching or drawing out of particular sounds or words.</p>
+
+                
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <p>Dysarthria occurs when damage to the brain causes muscle weakness in a person’s face, lips, tongue, throat, or chest.</p>
+                <p> Muscle weakness in these parts of the body can make speaking very difficult.</p>
+
+                <p>People who have dysarthria may experience the following symptoms:</p>
+                  
+                <p>slurred speech</p>
+                <p>mumbling</p>
+                <p>speaking too slowly or too quickly</p>
+                <p>soft or quiet speech</p>
+                <p>difficulty moving the mouth or tongue</p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------services------->
+
+    <div
+      id="services"
+      style="max-width: 60rem; margin-left: auto; margin-right: auto"
+    >
+      <div
+        id="modal"
+        style="display: none; position: fixed; backdrop-filter: blur(16px); top: 0; left: 0;"
+      >
+        <div
+        id="modal-content"
+          style="max-width: 50rem; background-color: rgba(19, 24, 43, 0.6)"
+        >
+    </div>
+      </div>
+      <div class="container">
+        <h1 class="sub-title">Contact</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-user-nurse"></i>
+            <h2>Babblings Roopa's clinic</h2>
+            <h3>+91 8767980987</h3>
+            <p>
+             Tambaram, Chennai -73.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-user-nurse"></i>
+            <h2>Jack's clinic </h2>
+            <h3>+91 7299945678</h3>
+            <p>
+              Anna Nagar, Chennai-100
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-user-nurse"></i>
+            <h2>Richard speech center</h2>
+            <h3>+91 7299945867</h3>
+            <p>
+              Medavakkam, Chennai-80
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-user-nurse"></i>
+            <h2>Vicky's clinic </h2>
+            <h3>+91 8451945678</h3>
+            <p>
+              Ramapuram,Chennai-89
+            </p>
+            <a href="javascript:void(0)" onclick="learnMore(`captcha`)">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------contact--------------->
+    <div
+      id="contact"
+      style="max-width: 60rem; margin-left: auto; margin-right: auto"
+    >
+      <div class="container">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p>matheshwaranixb@gmail.com</p>
+          <div class="social-icons">
+            <a
+              href="mailto:matheshwa8@gmail.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100069190314475&mibextid=ZbWKwL"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="https://twitter.com/Maddy73333229?t=kLFRjxyEDJqMoe33Axpl6Q&s=08"
+              ><i class="fab fa-twitter-square"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/matheshwaran-prakash-4a90a622b/?originalSubdomain=in"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--------exercises--------->
+<div
+id="about"
+style="max-width: 60rem; margin-left: auto; margin-right: auto"
+>
+<p>snake</p>
+<p>cross</p>
+<p>sister</p>
+    
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      const modal = document.querySelector("#modal")
+      const modalContent = document.querySelector("#modal-content")
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+      function learnMore(name) {
+        console.log(name)
+        modal.style.display = "block"
+        modalContent.textContent = abstracts[name]
+      }
+
+      const abstracts = {
+        captcha: `The user is provided a single image with 4-8 small “components” added to it. The user is given two prompts and is required to select two “components” that match the prompts, in the same order as the prompts.
+Our proposed model utilizes the euclidean distance between the user’s selection and the position of the object to determine the accuracy of the solution. Each “component” is positioned randomly on the image. The euclidean distance between the random position and the previous “components” is used to prevent images from overlapping.
+The background image is tinted once and the resultant image is tinted once. Finally, the resultant image is dithered with 1 bit colors to make it hard to recognize.`,
+      };
+    </script>
+  </body>
+</html>
