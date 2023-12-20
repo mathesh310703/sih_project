@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>maddyworks</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <script
       src="https://kit.fontawesome.com/eb04ca6b7f.js"
       crossorigin="anonymous"
@@ -97,55 +97,69 @@
           </div>
         </div>
       </div>
-      <div class=" container" style="padding: 2rem;display:flex;flex-direction:column;gap:1rem;">
+      <div class="container" style="padding: 2rem;display:flex;flex-direction:column;gap:1rem;">
         <h1 class="sub-title">Excercises</h1>
-        <div id="main"
-        style = "width:100%">
-          <template
-            id="playAudio"
-            
-          >
-            <span style="font-weight: bold; font-size:2rem;">Cross</span>
-            <div>
-              <button
-                style="display: block; padding: 1rem; background-color: #95cfff"
-              >
-                Play
-              </button>
-              <audio></audio>
-            </div>
-          </template>
-          <script type="text/javascript">
-            const words = ["bah", "cu", "su"];
-      
-            const template = document.querySelector("#playAudio");
-            const root = document.querySelector("#main");
-      
-            for (const word of words) {
-              const clone = template.content.cloneNode(true);
-              clone.style="display: flex; gap: 1rem; align-items: center;width:100%"
-              const btn = clone.querySelector("button");
-              const span = clone.querySelector("span");
-              const audio = clone.querySelector("audio");
-      
-              span.textContent = word;
-      
-              audio.src = `${word}.mp3`;
-      
-              btn.addEventListener("click", () => {
-                audio.play();
-              });
-              const div = document.createElement("div");
-              div.setAttribute(
-                "style",
-                "display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: center; padding:1rem"
-              );
-              div.appendChild(clone);
-              root.appendChild(div);
-            }
-          </script>
+        <div id="main" style="width:100%">
+            <template id="playAudio">
+                <span style="font-weight: bold; font-size:2rem;">Cross</span>
+                <div>
+                    <button class="playBtn" style="display: block; padding: 1rem; background-color: #ff00c3">
+                        Play
+                    </button>
+                    <button class="speakBtn" style="display: block; padding: 1rem; background-color: #ff00c3;margin-top: 0.25rem;">
+                        Speak
+                    </button>
+                    <audio></audio>
+                </div>
+            </template>
+            <script type="text/javascript">
+                const words = ["bah", "cu", "su", "socks"];
+    
+                const template = document.querySelector("#playAudio");
+                const root = document.querySelector("#main");
+    
+                for (const word of words) {
+                    const clone = template.content.cloneNode(true);
+                    clone.style = "display: flex; gap: 1rem; align-items: center;width:100%";
+                    const playBtn = clone.querySelector(".playBtn");
+                    const speakBtn = clone.querySelector(".speakBtn");
+                    const span = clone.querySelector("span");
+                    const audio = clone.querySelector("audio");
+    
+                    span.textContent = word;
+    
+                    audio.src = `${word}.mp3`;
+    
+                    playBtn.addEventListener("click", () => {
+                        audio.play();
+                    });
+    
+                    speakBtn.addEventListener("click", () => {
+                        // Send the word to Flask backend
+                        fetch('/play_audio', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ word: word }),
+                        })
+                            .then(response => response.json())
+                            .then(data => console.log(data))
+                            .catch(error => console.error(error));
+                    });
+    
+                    const div = document.createElement("div");
+                    div.setAttribute(
+                        "style",
+                        "display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: center; padding:1rem"
+                    );
+                    div.appendChild(clone);
+                    root.appendChild(div);
+                }
+            </script>
         </div>
-      </div>
+    </div>
+    
     </div>
     <!------------contact--------------->
 
