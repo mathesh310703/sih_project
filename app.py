@@ -45,5 +45,7 @@ def process():
     else:
         print("retry this exercise")
 
+    return (f"{text} {instruction}")
+
 if __name__ == "__main__":
     app.run()
